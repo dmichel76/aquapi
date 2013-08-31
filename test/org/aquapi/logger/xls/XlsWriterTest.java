@@ -1,11 +1,27 @@
 package org.aquapi.logger.xls;
 
+import org.junit.Test;
+
+import java.io.File;
+
 /**
- * Created with IntelliJ IDEA.
- * User: david
- * Date: 31/08/13
- * Time: 15:53
- * To change this template use File | Settings | File Templates.
+ * Unit tests for {@link XlsWriter}
  */
-public class XlsWriterTest {
+public class XlsWriterTest
+{
+
+    @Test
+    public void should_be_able_to_create_a_new_xls_file()
+    {
+        try
+        {
+            XlsWriter writer = new XlsWriter();
+            writer.createNew(new File("test.xls"));
+        }
+        catch(Exception ex)
+        {
+
+        }
+    }
+
 }
